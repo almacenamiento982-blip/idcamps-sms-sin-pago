@@ -116,8 +116,8 @@ footer{padding-block:28px 40px;color:var(--suave);font-size:13px}
 <footer><div class="wrap">Juventus ID Camps 2026-27 · Propuesta del 11-10-2026 · Página interna, no indexada. Solo totales: los nombres y teléfonos no se publican.</div></footer>
 
 <script>
-const CFG={"accion":"https://docs.google.com/forms/d/e/1FAIpQLSeGUY8Cv9Ea08X9HkdznY9pzVoUc4Gj-GdymsVTFP86wbE5sw/formResponse","entry":{"pieza":333677581,"cuenta":724853821,"autor":299801437,"comentario":1175231019,"copy_corregido":1649408514,"copy_original":1637675582,"enviado":909195940,"tipo":1605073129,"zona":1831673234,"fila":1327618412},"cuenta":"idcamps_sms_sinpago"};
-const LSK='idc_sms_sinpago_12oct';
+const CFG={"accion":"https://docs.google.com/forms/d/e/1FAIpQLSeGUY8Cv9Ea08X9HkdznY9pzVoUc4Gj-GdymsVTFP86wbE5sw/formResponse","entry":{"pieza":333677581,"cuenta":724853821,"autor":299801437,"comentario":1175231019,"copy_corregido":1649408514,"copy_original":1637675582,"enviado":909195940,"tipo":1605073129,"zona":1831673234,"fila":1327618412},"cuenta":"idcamps_sms_sinpago_v2"};
+const LSK='idc_sms_sinpago_12oct_v2';
 const LS={get(){try{return JSON.parse(localStorage.getItem(LSK)||'{}')}catch(e){return {}}},set(v){try{localStorage.setItem(LSK,JSON.stringify(v))}catch(e){}}};
 async function enviar(reg){const f=new URLSearchParams();for(const k in CFG.entry)f.append('entry.'+CFG.entry[k],reg[k]??'');
   try{await fetch(CFG.accion,{method:'POST',mode:'no-cors',body:f});return true}catch(e){return false}}
